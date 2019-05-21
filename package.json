@@ -20,7 +20,7 @@
     "build:flv": "browserify -s muxjs lib/flv/index.js -o dist/mux-flv.js",
     "build:js": "browserify -s muxjs lib/index.js -o dist/mux.js",
     "build:test": "browserify test/*.test.js -g browserify-shim -o dist-test/mux.js",
-    "lint": "eslint \"lib/**/*.js\" \"test/**/*.js\"",
+    "lint": "eslint --quiet \"lib/**/*.js\" \"test/**/*.js\"",
     "collapse": "npm-run-all -p collapse:*",
     "collapse:mp4": "bundle-collapser dist/mux-mp4.js -o dist/mux-mp4.min.js",
     "collapse:flv": "bundle-collapser dist/mux-flv.js -o dist/mux-flv.min.js",
